@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1718681515 source:c:\omar\programacion\c++\linked-list\project\list.cpp
+1718688817 source:c:\omar\programacion\c++\linked-list\project\list.cpp
 	"List.h"
 	"Student.h"
 
@@ -8,8 +8,12 @@
 	"Node.h"
 	<iostream>
 
-1584205420 source:c:\omar\programacion\c++\linked-list\project\main.cpp
+1718688776 source:c:\omar\programacion\c++\linked-list\project\main.cpp
 	<iostream>
+	<cstdlib>
+	"Student.h"
+	"List.h"
+	"Node.h"
 
 1718679835 source:c:\omar\programacion\c++\linked-list\project\node.cpp
 	"Node.h"

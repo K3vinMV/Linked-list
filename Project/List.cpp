@@ -212,41 +212,35 @@ Node* List::last()
 Node* List::next(int age)
 {
     Node *aux1 = h;
-    Node *aux2;
+    Node *aux2 = nullptr;
 
-    while(aux2->data.age!=age)
-    {
-        aux2=aux1;
-        aux1=aux1->next;
+    while (aux1 != nullptr && aux1->data.age != age) {
+        aux2 = aux1;
+        aux1 = aux1->next;
     }
-    if(aux2->data.age==age)
-    {
-        return aux1;
-    }else
-    {
+
+    if (aux1 != nullptr) {
+        return aux1->next;
+    } else {
         return nullptr;
     }
 }
 
-Node* List::previous(int age)
-{
+Node* List::previous(int age) {
     Node *aux1 = h;
-    Node *aux2;
+    Node *aux2 = nullptr;
+    Node *prevNode = nullptr;
 
-    while(aux1->data.age!=age)
-    {
-        aux2=aux1;
-        aux1=aux1->next;
+    while (aux1 != nullptr && aux1->data.age != age) {
+        aux2 = aux1;
+        aux1 = aux1->next;
     }
-    if(aux1->data.age==age)
-    {
-        return aux2;
-    }else
-    {
-        return nullptr;
+
+    if (aux1 != nullptr && aux1->data.age == age) {
+        prevNode = aux2;
     }
+    return prevNode;
 }
-
 
 
 

@@ -42,6 +42,7 @@ int main()
         case 1:
             system("cls");
             cout<<"-------INITIALIZE-------"<<endl;
+            cout<<"List started"<<endl;
             lis->initialize();
             pause();
             break;
@@ -49,9 +50,9 @@ int main()
         case 2:
             system("cls");
             cout<<"-------INSERT AT BEGINNING-------"<<endl;
-            cout<<"Insert name: \n"<<endl;
+            cout<<"Insert name: "<<endl;
             cin>>data.name;
-            cout<<"Insert age: \n"<<endl;
+            cout<<"Insert age: "<<endl;
             cin>>data.age;
             lis->insertAtBeginning(Student(data));
             pause();
@@ -60,9 +61,9 @@ int main()
         case 3:
             system("cls");
             cout<<"-------INSERT AT END-------"<<endl;
-            cout<<"Insert name: \n"<<endl;
+            cout<<"Insert name: "<<endl;
             cin>>data.name;
-            cout<<"Insert age: \n"<<endl;
+            cout<<"Insert age: "<<endl;
             cin>>data.age;
             lis->insertAtEnd(Student(data));
             pause();
@@ -72,11 +73,11 @@ int main()
             system("cls");
             int num;
             cout<<"-------INSERT AT POSITION-------"<<endl;
-            cout<<"Insert name: \n"<<endl;
+            cout<<"Insert name: "<<endl;
             cin>>data.name;
-            cout<<"Insert age: \n"<<endl;
+            cout<<"Insert age: "<<endl;
             cin>>data.age;
-            cout<<"Which position do you want to insert it?(Starting with 0)"<<endl;
+            cout<<"Which position do you want to insert it?(Starting with 0) "<<endl;
             cin>>num;
             lis->insertAtPosition(Student(data),num);
             pause();
@@ -172,12 +173,20 @@ int main()
             system("cls");
             int age2;
             Node *nextOne;
-            cout<<"-------NEXT-------"<<endl;
-            cout<<"Please enter the age of the student you want to know who is next to: "<<endl;
-            cin>>age2;
-            nextOne=(lis->next(age2));
-            cout<<nextOne->data.name<<endl;
-            cout<<nextOne->data.age<<endl;
+            cout << "-------NEXT-------" << endl;
+            cout << "Please enter the age of the student you want to know who is next to: ";
+            cin >> age2;
+
+            nextOne = lis->next(age2);
+
+            if (nextOne != nullptr) {
+                cout << "Next student:" << endl;
+                cout << "Name: " << nextOne->data.name << endl;
+                cout << "Age: " << nextOne->data.age << endl;
+            } else {
+                cout << "Student with age " << age2 << " not found or is the last in the list." << endl;
+            }
+
             pause();
             break;
 
@@ -185,12 +194,20 @@ int main()
             system("cls");
             int age3;
             Node *prevStud;
-            cout<<"-------PREVIOUS-------"<<endl;
-            cout<<"Please enter the age of the student you want to know who is previous to: "<<endl;
-            cin>>age3;
-            prevStud=(lis->previous(age3));
-            cout<<prevStud->data.name<<endl;
-            cout<<prevStud->data.age<<endl;
+            cout << "-------PREVIOUS-------" << endl;
+            cout << "Please enter the age of the student you want to know who is previous to: ";
+            cin >> age3;
+
+            prevStud = lis->previous(age3);
+
+            if (prevStud != nullptr) {
+                cout << "Previous student:" << endl;
+                cout << "Name: " << prevStud->data.name << endl;
+                cout << "Age: " << prevStud->data.age << endl;
+            } else {
+                cout << "Student with age " << age3 << " not found or is the first in the list." << endl;
+            }
+
             pause();
             break;
 
