@@ -10,5 +10,12 @@
 1718679359 source:c:\omar\programacion\c++\linked-list\project\node.cpp
 	"Node.h"
 
-1718679359 c:\omar\programacion\c++\linked-list\project\node.h
+1718679729 c:\omar\programacion\c++\linked-list\project\node.h
+	"Student.h"
+
+1718679489 c:\omar\programacion\c++\linked-list\project\student.h
+	<iostream>
+
+1718679420 source:c:\omar\programacion\c++\linked-list\project\student.cpp
+	"Student.h"
 
