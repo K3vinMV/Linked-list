@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1718679325 source:c:\omar\programacion\c++\linked-list\project\list.cpp
+	"List.h"
+
+1718679325 c:\omar\programacion\c++\linked-list\project\list.h
+
+1584205420 source:c:\omar\programacion\c++\linked-list\project\main.cpp
+	<iostream>
+
+1718679359 source:c:\omar\programacion\c++\linked-list\project\node.cpp
+	"Node.h"
+
+1718679359 c:\omar\programacion\c++\linked-list\project\node.h
+
